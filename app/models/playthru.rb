@@ -1,0 +1,2 @@
+class Playthru < ApplicationRecord
+end
