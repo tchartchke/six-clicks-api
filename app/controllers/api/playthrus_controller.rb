@@ -4,6 +4,7 @@ class Api::PlaythrusController < ApplicationController
   end
 
   def create
+    puts playthru_params.inspect
     playthru = Playthru.new(playthru_params)
     if playthru.save
       render json: playthru
@@ -19,6 +20,7 @@ class Api::PlaythrusController < ApplicationController
   private
 
   def playthru_params
-    params.require(:playthru).permit(:name, :clicks, :start, :end, :path)
+    puts params.inspect
+    params.require(:playthru).permit(:name, :clicks, :start, :end, path: [])
   end
 end
