@@ -2,8 +2,8 @@
 https://github.com/tchartchke/six-clicks
 
 
-# (create) save a Playthru
- - name
- - num clicks taken
- - start and end point (mission)
- - path - array
+# can show and save a Playthru
+ - name (str)
+ - num clicks taken (int)
+ - start and end points :: aka mission (str)
+ - path - (array)
