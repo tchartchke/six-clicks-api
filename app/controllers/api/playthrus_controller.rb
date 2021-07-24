@@ -1,13 +1,13 @@
 class Api::PlaythrusController < ApplicationController
   def index
-    render json: Playthru.all
+    render json: Playthru.all.reverse_order
   end
 
   def create
     puts playthru_params.inspect
     playthru = Playthru.new(playthru_params)
     if playthru.save
-      render json: Playthru.all
+      render json: Playthru.all.reverse_order
     else
       render json: { message: playthru.errors }, status: 400
     end
