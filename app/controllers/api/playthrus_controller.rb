@@ -7,7 +7,7 @@ class Api::PlaythrusController < ApplicationController
     puts playthru_params.inspect
     playthru = Playthru.new(playthru_params)
     if playthru.save
-      render json: playthru
+      render json: Playthru.all
     else
       render json: { message: playthru.errors }, status: 400
     end
